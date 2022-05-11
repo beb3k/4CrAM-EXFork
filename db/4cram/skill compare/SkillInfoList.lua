@@ -16058,7 +16058,7 @@ SKILL_INFO_LIST = {
 		"HN_JACK_FROST_NOVA",
 		SkillName = "잭 프로스트 노바",
 		MaxLv = 10,
-		SpAmount = { 58, 61, 64, 67, 70, 73, 76, 79, 83, 85 },
+		SpAmount = { 58, 61, 64, 67, 70, 73, 76, 79, 82, 85 },
 		bSeperateLv = true,
 		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {

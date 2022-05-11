@@ -18,9 +18,9 @@
 
 //===== Night Watch ========================
 //-- NW_P_F_I
-5401,0,0,0,0,0,0,0
+//5401,0,0,0,0,0,0,0
 //-- NW_GRENADE_MASTERY
-5402,0,0,0,0,0,0,0
+//5402,0,0,0,0,0,0,0
 //-- NW_INTENSIVE_AIM
 5403,0,0,0,0,0,0,0
 //-- NW_GRENADE_FRAGMENT
@@ -51,9 +51,9 @@
 
 //===== Soul Ascetic =======================
 //-- SOA_TALISMAN_MASTERY
-5416,0,0,0,0,0,0,0
+//5416,0,0,0,0,0,0,0
 //-- SOA_SOUL_MASTERY
-5417,0,0,0,0,0,0,0
+//5417,0,0,0,0,0,0,0
 //-- SOA_TALISMAN_OF_PROTECTION
 5418,0,0,0,0,0,0,0
 //-- SOA_TALISMAN_OF_WARRIOR
@@ -88,9 +88,9 @@
 
 //===== Spirit Handler =====================
 //-- SH_MYSTICAL_CREATURE_MASTERY
-5433,0,0,0,0,0,0,0
+//5433,0,0,0,0,0,0,0
 //-- SH_COMMUNE_WITH_CHUL_HO
-5434,0,0,0,0,0,0,0
+//5434,0,0,0,0,0,0,0
 //-- SH_CHUL_HO_SONIC_CLAW
 5435,0,0,0,0,0,0,0
 //-- SH_HOWLING_OF_CHUL_HO
@@ -98,7 +98,7 @@
 //-- SH_HOGOGONG_STRIKE
 5437,0,0,0,0,0,0,0
 //-- SH_COMMUNE_WITH_KI_SUL
-5438,0,0,0,0,0,0,0
+//5438,0,0,0,0,0,0,0
 //-- SH_KI_SUL_WATER_SPRAYING
 5439,0,0,0,0,0,0,0
 //-- SH_MARINE_FESTIVAL_OF_KI_SUL
@@ -108,7 +108,7 @@
 //-- SH_KI_SUL_RAMPAGE
 5442,0,0,0,0,0,0,0
 //-- SH_COMMUNE_WITH_HYUN_ROK
-5443,0,0,0,0,0,0,0
+//5443,0,0,0,0,0,0,0
 //-- SH_COLORS_OF_HYUN_ROK
 5444,0,0,0,0,0,0,0
 //-- SH_HYUN_ROKS_BREEZE
@@ -123,9 +123,9 @@
 
 //===== Hyper Novice =======================
 //-- HN_SELFSTUDY_TATICS
-5449,0,0,0,0,0,0,0
+//5449,0,0,0,0,0,0,0
 //-- HN_SELFSTUDY_SOCERY
-5450,0,0,0,0,0,0,0
+//5450,0,0,0,0,0,0,0
 //-- HN_DOUBLEBOWLINGBASH
 5451,0,0,0,0,0,0,0
 //-- HN_MEGA_SONIC_BLOW
@@ -154,9 +154,9 @@
 
 //===== Sky Emperor ========================
 //-- SKE_SKY_MASTERY
-5463,0,0,0,0,0,0,0
+//5463,0,0,0,0,0,0,0
 //-- SKE_WAR_BOOK_MASTERY
-5464,0,0,0,0,0,0,0
+//5464,0,0,0,0,0,0,0
 //-- SKE_RISING_SUN
 5465,0,0,0,0,0,0,0
 //-- SKE_NOON_BLAST

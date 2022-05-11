@@ -4932,7 +4932,7 @@ StateIconList[EFST_IDs.EFST_SWEETSFAIR_ATK] = {
 	haveTimeLimit = 1,
 	posTimeLimitStr = 2,
 	descript = {
-		{ "힘세고 강한 연기", COLOR_TITLE_BUFF },
+		{ "이벤트 강력해져라!", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
 		{ "ATK + 7%" }
 	}
@@ -4941,7 +4941,7 @@ StateIconList[EFST_IDs.EFST_SWEETSFAIR_MATK] = {
 	haveTimeLimit = 1,
 	posTimeLimitStr = 2,
 	descript = {
-		{ "지혜롭고 강한 연기", COLOR_TITLE_BUFF },
+		{ "이벤트 똑똑해져라!", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
 		{ "MATK + 7%" }
 	}
@@ -4969,7 +4969,7 @@ StateIconList[EFST_IDs.EFST_FLOWER_LEAF2] = {
 	haveTimeLimit = 1,
 	posTimeLimitStr = 2,
 	descript = {
-		{ "날카롭고 강한 연기", COLOR_TITLE_BUFF },
+		{ "이벤트 날렵해져라!", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
 		{ "회피율 및 완전회피 증가" },
 		{ "공격 속도 증가" },
@@ -6773,5 +6773,68 @@ StateIconList[EFST_IDs.EFST_NIGHTMARE] = {
 		{ "악몽", COLOR_TITLE_DEBUFF },
 		{ "%s", COLOR_TIME },
 		{ "악몽 표식" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_SPEED] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "이동속도 증가", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "이동속도 증가" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_ASPD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "공격속도 증가", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "공격속도 증가" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_MHP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "MHP 증가", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "MHP 증가" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_MSP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "MSP 증가", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "MSP 증가" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_HIT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "HIT 증가", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "HIT 증가" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_DEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "DEF 증가", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "DEF 증가" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_MDEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "MDEF 증가", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "MDEF 증가" }
 	}
 }
