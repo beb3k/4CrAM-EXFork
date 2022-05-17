@@ -1551,12 +1551,12 @@ uint8 pc_isequip(struct map_session_data *sd,int n)
 				break;
 #endif
 			case AMMO_CANNONBALL:
-				if (!pc_ismadogear(sd) && (sd->status.class_ == JOB_MECHANIC_T || sd->status.class_ == JOB_MECHANIC)) {
+				if (!pc_ismadogear(sd) && (sd->class_ & MAPID_THIRDMASK) == MAPID_MECHANIC) {
 					clif_msg(sd, ITEM_NEED_MADOGEAR); // Item can only be used when Mado Gear is mounted.
 					return ITEM_EQUIP_ACK_FAIL;
 				}
 				if (sd->state.active && !pc_iscarton(sd) && //Check if sc data is already loaded
-					(sd->status.class_ == JOB_GENETIC_T || sd->status.class_ == JOB_GENETIC)) {
+					(sd->class_ & MAPID_THIRDMASK) == MAPID_GENETIC) {
 					clif_msg(sd, ITEM_NEED_CART); // Only available when cart is mounted.
 					return ITEM_EQUIP_ACK_FAIL;
 				}
