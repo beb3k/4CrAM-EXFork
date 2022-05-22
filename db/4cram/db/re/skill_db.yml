@@ -15,6 +15,7 @@ Body:
     Name: NW_INTENSIVE_AIM
     Description: Intensive Aim
     MaxLevel: 1
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -24,6 +25,7 @@ Body:
     Name: NW_GRENADE_FRAGMENT
     Description: Grenade Fragment
     MaxLevel: 7
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -33,6 +35,7 @@ Body:
     Name: NW_THE_VIGILANTE_AT_NIGHT
     Description: The Vigilante At Night
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -52,6 +55,8 @@ Body:
     Name: NW_ONLY_ONE_BULLET
     Description: Only One Bullet
     MaxLevel: 5
+    TargetType: Attack
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -71,6 +76,8 @@ Body:
     Name: NW_SPIRAL_SHOOTING
     Description: Spiral Shooting
     MaxLevel: 5
+    TargetType: Attack
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -90,6 +97,8 @@ Body:
     Name: NW_MAGAZINE_FOR_ONE
     Description: Magazine For One
     MaxLevel: 5
+    TargetType: Attack
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -109,6 +118,8 @@ Body:
     Name: NW_WILD_FIRE
     Description: Wild Fire
     MaxLevel: 5
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -128,6 +139,8 @@ Body:
     Name: NW_BASIC_GRENADE
     Description: Basic Grenade
     MaxLevel: 5
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -147,6 +160,8 @@ Body:
     Name: NW_HASTY_FIRE_IN_THE_HOLE
     Description: Hasty Fire In The Hole
     MaxLevel: 5
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -166,6 +181,8 @@ Body:
     Name: NW_GRENADES_DROPPING
     Description: Grenades Dropping
     MaxLevel: 5
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -193,6 +210,7 @@ Body:
     Name: NW_AUTO_FIRING_LAUNCHER
     Description: Auto Firing Launcher
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -212,6 +230,7 @@ Body:
     Name: NW_HIDDEN_CARD
     Description: Hidden Card
     MaxLevel: 10
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -222,6 +241,8 @@ Body:
     Name: NW_MISSION_BOMBARD
     Description: Mission Bombard
     MaxLevel: 10
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -248,6 +269,8 @@ Body:
     Name: SOA_TALISMAN_OF_PROTECTION
     Description: Talisman Of Protection
     MaxLevel: 5
+    TargetType: Support
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -267,6 +290,8 @@ Body:
     Name: SOA_TALISMAN_OF_WARRIOR
     Description: Talisman Of Warrior
     MaxLevel: 5
+    TargetType: Support
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -286,6 +311,8 @@ Body:
     Name: SOA_TALISMAN_OF_MAGICIAN
     Description: Talisman Of Magician
     MaxLevel: 5
+    TargetType: Support
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -305,6 +332,7 @@ Body:
     Name: SOA_SOUL_GATHERING
     Description: Soul Gathering
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -324,6 +352,8 @@ Body:
     Name: SOA_TOTEM_OF_TUTELARY
     Description: Totem Of Tutelary
     MaxLevel: 5
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -351,6 +381,8 @@ Body:
     Name: SOA_TALISMAN_OF_FIVE_ELEMENTS
     Description: Talisman Of Five Elements
     MaxLevel: 5
+    TargetType: Support
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -370,6 +402,8 @@ Body:
     Name: SOA_TALISMAN_OF_SOUL_STEALING
     Description: Talisman Of Soul Stealing
     MaxLevel: 5
+    TargetType: Attack
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -379,6 +413,7 @@ Body:
     Name: SOA_EXORCISM_OF_MALICIOUS_SOUL
     Description: Exorcism Of Malicious Soul
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -398,6 +433,8 @@ Body:
     Name: SOA_TALISMAN_OF_BLUE_DRAGON
     Description: Talisman Of Blue Dragon
     MaxLevel: 5
+    TargetType: Attack
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -417,6 +454,7 @@ Body:
     Name: SOA_TALISMAN_OF_WHITE_TIGER
     Description: Talisman Of White Tiger
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -436,6 +474,8 @@ Body:
     Name: SOA_TALISMAN_OF_RED_PHOENIX
     Description: Talisman Of Red Phoenix
     MaxLevel: 5
+    TargetType: Attack
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -455,6 +495,8 @@ Body:
     Name: SOA_TALISMAN_OF_BLACK_TORTOISE
     Description: Talisman Of Black Tortoise
     MaxLevel: 5
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -474,6 +516,8 @@ Body:
     Name: SOA_TALISMAN_OF_FOUR_BEARING_GOD
     Description: Talisman Of Four Bearing God
     MaxLevel: 5
+    TargetType: Attack
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -493,6 +537,8 @@ Body:
     Name: SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS
     Description: Circle Of Directions And Elementals
     MaxLevel: 5
+    TargetType: Attack
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -513,6 +559,7 @@ Body:
     Name: SOA_SOUL_OF_HEAVEN_AND_EARTH
     Description: Soul Of Heaven And Earth
     MaxLevel: 10
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -551,6 +598,8 @@ Body:
     Name: SH_CHUL_HO_SONIC_CLAW
     Description: Chul Ho Sonic Claw
     MaxLevel: 7
+    TargetType: Attack
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -574,6 +623,7 @@ Body:
     Name: SH_HOWLING_OF_CHUL_HO
     Description: Howling Of Chul Ho
     MaxLevel: 7
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -597,6 +647,7 @@ Body:
     Name: SH_HOGOGONG_STRIKE
     Description: Hogogong Strike
     MaxLevel: 7
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -624,6 +675,7 @@ Body:
     Name: SH_KI_SUL_WATER_SPRAYING
     Description: Ki Sul Water Spraying
     MaxLevel: 7
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -647,6 +699,7 @@ Body:
     Name: SH_MARINE_FESTIVAL_OF_KI_SUL
     Description: Marine Festival Of Ki Sul
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -666,6 +719,7 @@ Body:
     Name: SH_SANDY_FESTIVAL_OF_KI_SUL
     Description: Sandy Festival Of Ki Sul
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -685,6 +739,7 @@ Body:
     Name: SH_KI_SUL_RAMPAGE
     Description: Ki Sul Rampage
     MaxLevel: 7
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -712,6 +767,7 @@ Body:
     Name: SH_COLORS_OF_HYUN_ROK
     Description: Colors Of Hyun Rok
     MaxLevel: 7
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -721,6 +777,8 @@ Body:
     Name: SH_HYUN_ROKS_BREEZE
     Description: Hyun Roks Breeze
     MaxLevel: 7
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -752,6 +810,8 @@ Body:
     Name: SH_HYUN_ROK_CANNON
     Description: Hyun Rok Cannon
     MaxLevel: 7
+    TargetType: Attack
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -775,6 +835,7 @@ Body:
     Name: SH_TEMPORARY_COMMUNION
     Description: Temporary Communion
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -785,6 +846,8 @@ Body:
     Name: SH_BLESSING_OF_MYSTICAL_CREATURES
     Description: Blessing Of Mystical Creatures
     MaxLevel: 5
+    TargetType: Attack
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -803,6 +866,8 @@ Body:
     Name: HN_DOUBLEBOWLINGBASH
     Description: Double Bowling Bash
     MaxLevel: 10
+    TargetType: Attack
+    Range: 2
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -832,6 +897,8 @@ Body:
     Name: HN_MEGA_SONIC_BLOW
     Description: Mega Sonic Blow
     MaxLevel: 10
+    TargetType: Attack
+    Range: 2
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -861,6 +928,28 @@ Body:
     Name: HN_SHIELD_CHAIN_RUSH
     Description: Shield Chain Rush
     MaxLevel: 10
+    TargetType: Attack
+    Range:
+      - Level: 1
+        Size: 7
+      - Level: 2
+        Size: 7
+      - Level: 3
+        Size: 7
+      - Level: 4
+        Size: 7
+      - Level: 5
+        Size: 9
+      - Level: 6
+        Size: 9
+      - Level: 7
+        Size: 9
+      - Level: 8
+        Size: 9
+      - Level: 9
+        Size: 11
+      - Level: 10
+        Size: 11
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -890,6 +979,8 @@ Body:
     Name: HN_SPIRAL_PIERCE_MAX
     Description: Spiral Pierce Max
     MaxLevel: 10
+    TargetType: Attack
+    Range: 7
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -919,6 +1010,8 @@ Body:
     Name: HN_METEOR_STORM_BUSTER
     Description: Meteor Storm Buster
     MaxLevel: 10
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -948,6 +1041,8 @@ Body:
     Name: HN_JUPITEL_THUNDER_STORM
     Description: Jupitel Thunder Storm
     MaxLevel: 10
+    TargetType: Attack
+    Range: 11
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -977,6 +1072,8 @@ Body:
     Name: HN_JACK_FROST_NOVA
     Description: Jack Frost Nova
     MaxLevel: 10
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1014,6 +1111,7 @@ Body:
     Name: HN_HELLS_DRIVE
     Description: Hells Drive
     MaxLevel: 10
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1043,6 +1141,7 @@ Body:
     Name: HN_GROUND_GRAVITATION
     Description: Ground Gravitation
     MaxLevel: 10
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1080,6 +1179,8 @@ Body:
     Name: HN_NAPALM_VULCAN_STRIKE
     Description: Napalm Vulcan Strike
     MaxLevel: 10
+    TargetType: Attack
+    Range: 11
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1109,6 +1210,7 @@ Body:
     Name: HN_BREAKINGLIMIT
     Description: Breaking Limit
     MaxLevel: 1
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1119,6 +1221,7 @@ Body:
     Name: HN_RULEBREAK
     Description: Rule Break
     MaxLevel: 1
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1137,6 +1240,8 @@ Body:
     Name: SKE_RISING_SUN
     Description: Rising Sun
     MaxLevel: 5
+    TargetType: Attack
+    Range: 2
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1146,6 +1251,8 @@ Body:
     Name: SKE_NOON_BLAST
     Description: Noon Blast
     MaxLevel: 5
+    TargetType: Attack
+    Range: 2
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1165,6 +1272,8 @@ Body:
     Name: SKE_SUNSET_BLAST
     Description: Sunset Blast
     MaxLevel: 5
+    TargetType: Attack
+    Range: 2
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1184,6 +1293,7 @@ Body:
     Name: SKE_RISING_MOON
     Description: Rising Moon
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1193,6 +1303,7 @@ Body:
     Name: SKE_MIDNIGHT_KICK
     Description: Midnight Kick
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1212,6 +1323,7 @@ Body:
     Name: SKE_DAWN_BREAK
     Description: Dawn Break
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1231,6 +1343,7 @@ Body:
     Name: SKE_TWINKLING_GALAXY
     Description: Twinkling Galaxy
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1248,6 +1361,8 @@ Body:
     Name: SKE_STAR_BURST
     Description: Star Burst
     MaxLevel: 5
+    TargetType: Attack
+    Range: 1
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1267,6 +1382,7 @@ Body:
     Name: SKE_STAR_CANNON
     Description: Star Cannon
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1294,6 +1410,8 @@ Body:
     Name: SKE_ALL_IN_THE_SKY
     Description: All In The Sky
     MaxLevel: 10
+    TargetType: Attack
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1304,6 +1422,7 @@ Body:
     Name: SKE_ENCHANTING_SKY
     Description: Enchanting Sky
     MaxLevel: 10
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1314,6 +1433,8 @@ Body:
     Name: SS_TOKEDASU
     Description: Melt Away
     MaxLevel: 5
+    TargetType: Ground
+    Range: 5
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1323,6 +1444,8 @@ Body:
     Name: SS_SHIMIRU
     Description: Infiltrate
     MaxLevel: 5
+    TargetType: Attack
+    Range: 11
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1332,6 +1455,7 @@ Body:
     Name: SS_AKUMUKESU
     Description: Nightmare Erasion
     MaxLevel: 1
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1341,6 +1465,8 @@ Body:
     Name: SS_SHINKIROU
     Description: Mirage
     MaxLevel: 1
+    TargetType: Ground
+    Range: 5
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1358,6 +1484,8 @@ Body:
     Name: SS_KAGEGARI
     Description: Shadow Hunting
     MaxLevel: 10
+    TargetType: Ground
+    Range: 2
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1387,6 +1515,7 @@ Body:
     Name: SS_KAGENOMAI
     Description: Shadow Dance
     MaxLevel: 10
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1416,6 +1545,8 @@ Body:
     Name: SS_KAGEGISSEN
     Description: Shadow Flash
     MaxLevel: 10
+    TargetType: Attack
+    Range: 1
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1445,6 +1576,8 @@ Body:
     Name: SS_FUUMASHOUAKU
     Description: Huuma Shuriken - Grasp
     MaxLevel: 10
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1482,6 +1615,8 @@ Body:
     Name: SS_FUUMAKOUCHIKU
     Description: Huuma Shuriken - Construct
     MaxLevel: 10
+    TargetType: Ground
+    Range: 1
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1511,6 +1646,8 @@ Body:
     Name: SS_KUNAIWAIKYOKU
     Description: Kunai - Distortion
     MaxLevel: 10
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1548,6 +1685,7 @@ Body:
     Name: SS_KUNAIKAITEN
     Description: Kunai - Rotation
     MaxLevel: 5
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1557,6 +1695,7 @@ Body:
     Name: SS_KUNAIKUSSETSU
     Description: Kunai - Refraction
     MaxLevel: 10
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1566,6 +1705,8 @@ Body:
     Name: SS_SEKIENHOU
     Description: Red Flame Cannon
     MaxLevel: 10
+    TargetType: Ground
+    Range: 1
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1595,6 +1736,8 @@ Body:
     Name: SS_REIKETSUHOU
     Description: Cold Blooded Cannon
     MaxLevel: 10
+    TargetType: Ground
+    Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1624,6 +1767,8 @@ Body:
     Name: SS_RAIDENPOU
     Description: Thundering Cannon
     MaxLevel: 10
+    TargetType: Ground
+    Range: 1
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1653,6 +1798,8 @@ Body:
     Name: SS_KINRYUUHOU
     Description: Golden Dragon Canno
     MaxLevel: 10
+    TargetType: Attack
+    Range: 13
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1682,6 +1829,7 @@ Body:
     Name: SS_ANTENPOU
     Description: Darkening Cannon
     MaxLevel: 10
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1711,6 +1859,7 @@ Body:
     Name: SS_KAGEAKUMU
     Description: Shadow - Nightmare
     MaxLevel: 1
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1721,6 +1870,7 @@ Body:
     Name: SS_HITOUAKUMU
     Description: Kunai - Nightmare
     MaxLevel: 1
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -1731,6 +1881,7 @@ Body:
     Name: SS_ANKOKURYUUAKUMU
     Description: Dark Dragon - Nightmare
     MaxLevel: 1
+    TargetType: Self
     Hit: Single
     HitCount: 1
     CastCancel: true
