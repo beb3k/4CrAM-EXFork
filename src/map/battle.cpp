@@ -1204,11 +1204,11 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 		status_change_end(target, SC_SAFETYWALL, INVALID_TIMER);
 	}
 
-	if ((sc->data[SC_PNEUMA] && (flag&(BF_MAGIC | BF_LONG)) == BF_LONG) ||
+	if ((sc->data[SC_PNEUMA] && (flag&(BF_MAGIC | BF_LONG)) == BF_LONG) || (
 #ifdef RENEWAL
-		(sc->data[SC_BASILICA_CELL]
+		sc->data[SC_BASILICA_CELL]
 #else
-		(sc->data[SC_BASILICA]
+		sc->data[SC_BASILICA]
 #endif
 		&& !status_bl_has_mode(src, MD_STATUSIMMUNE) && skill_id != SP_SOULEXPLOSION) ||
 		(sc->data[SC_ZEPHYR] && !(flag&BF_MAGIC && skill_id) && !(skill_get_inf(skill_id)&(INF_GROUND_SKILL | INF_SELF_SKILL))) ||
@@ -5324,6 +5324,50 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			if (tsc && tsc->data[SC_SOUNDBLEND])
 				skillratio += skillratio * 50 / 100;
 			break;
+		case SKE_RISING_SUN:
+			skillratio += 400 + 400 * skill_lv + 5 * skill_lv * (sd ? pc_checkskill(sd, SKE_SKY_MASTERY) : 10) + 5 * sstatus->pow;
+			RE_LVL_DMOD(100);
+			break;
+		case SKE_NOON_BLAST:
+			skillratio += 1400 + 900 * skill_lv + 5 * skill_lv * (sd ? pc_checkskill(sd, SKE_SKY_MASTERY) : 10) + 5 * sstatus->pow;
+			RE_LVL_DMOD(100);
+			break;
+		case SKE_SUNSET_BLAST:
+			skillratio += 800 + 300 * skill_lv + 5 * skill_lv * (sd ? pc_checkskill(sd, SKE_SKY_MASTERY) : 10) + 5 * sstatus->pow;
+			RE_LVL_DMOD(100);
+			break;
+		case SKE_RISING_MOON:
+			skillratio += 500 + 300 * skill_lv + 5 * skill_lv * (sd ? pc_checkskill(sd, SKE_SKY_MASTERY) : 10) + 5 * sstatus->pow;
+			RE_LVL_DMOD(100);
+			break;
+		case SKE_MIDNIGHT_KICK:
+			skillratio += 400 + 1000 * skill_lv + 5 * skill_lv * (sd ? pc_checkskill(sd, SKE_SKY_MASTERY) : 10) + 5 * sstatus->pow;
+			if (sc && sc->data[SC_MIDNIGHT_MOON])
+				skillratio += 1000 + 200 * skill_lv;
+			RE_LVL_DMOD(100);
+			break;
+		case SKE_DAWN_BREAK:
+			skillratio += 200 + 400 * skill_lv + 5 * skill_lv * (sd ? pc_checkskill(sd, SKE_SKY_MASTERY) : 10) + 5 * sstatus->pow;
+			if (sc && sc->data[SC_DAWN_MOON])
+				skillratio += 200 * skill_lv;
+			RE_LVL_DMOD(100);
+			break;
+		case SKE_TWINKLING_GALAXY:
+			skillratio += 100 + 400 * skill_lv + 3 * skill_lv * (sd ? pc_checkskill(sd, SKE_SKY_MASTERY) : 10) + 5 * sstatus->pow;
+			RE_LVL_DMOD(100);
+			break;
+		case SKE_STAR_BURST:
+			skillratio += 400 + 400 * skill_lv + 5 * skill_lv * (sd ? pc_checkskill(sd, SKE_SKY_MASTERY) : 10) + 5 * sstatus->pow;
+			RE_LVL_DMOD(100);
+			break;
+		case SKE_STAR_CANNON:
+			skillratio += 100 + 500 * skill_lv + 5 * skill_lv * (sd ? pc_checkskill(sd, SKE_SKY_MASTERY) : 10) + 5 * sstatus->pow;
+			RE_LVL_DMOD(100);
+			break;
+		case SKE_ALL_IN_THE_SKY:
+			skillratio += -100 + 2000 * skill_lv + 10 * sstatus->pow;
+			RE_LVL_DMOD(100);
+			break;
 		case ABR_BATTLE_BUSTER:// Need official formula.
 		case ABR_DUAL_CANNON_FIRE:// Need official formula.
 			skillratio += -100 + 8000;
@@ -8615,10 +8659,11 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 					case W_GRENADE:
 						if (sd->inventory_data[index]->subtype !=
 #ifdef RENEWAL
-							AMMO_BULLET) {
+							AMMO_BULLET)
 #else
-							AMMO_GRENADE) {
+							AMMO_GRENADE)
 #endif
+						{
 							clif_skill_fail(sd,0,USESKILL_FAIL_NEED_MORE_BULLET,0);
 							return ATK_NONE;
 						}

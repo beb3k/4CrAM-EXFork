@@ -6672,16 +6672,21 @@ uint8 pc_checkskill(struct map_session_data *sd, uint16 skill_id)
 
 #ifdef RENEWAL
 	if ((idx = skill_get_index(skill_id)) == 0) {
+		ShowError("pc_checkskill: Invalid skill id %d (char_id=%d).\n", skill_id, sd->status.char_id);
+		return 0;
+	}
 #else
 	if( ( idx = skill_db.get_index( skill_id, skill_id >= RK_ENCHANTBLADE, __FUNCTION__, __FILE__, __LINE__ ) ) == 0 ){
 		if( skill_id >= RK_ENCHANTBLADE ){
 			// Silently fail for now -> future update planned
 			return 0;
 		}
-#endif
+
 		ShowError("pc_checkskill: Invalid skill id %d (char_id=%d).\n", skill_id, sd->status.char_id);
 		return 0;
-	}
+}
+#endif
+
 	if (SKILL_CHK_GUILD(skill_id) ) {
 		struct guild *g;
 
@@ -11710,10 +11715,11 @@ bool pc_unequipitem(struct map_session_data *sd, int n, int flag) {
 		if( !battle_config.dancing_weaponswitch_fix )
 			status_change_end(&sd->bl, SC_DANCING, INVALID_TIMER); // Unequipping => stop dancing.
 #ifdef RENEWAL
-		if (battle_config.switch_remove_edp&2) {
+		if (battle_config.switch_remove_edp&2)
 #else
-		if (battle_config.switch_remove_edp&1) {
+		if (battle_config.switch_remove_edp&1)
 #endif
+		{
 			status_change_end(&sd->bl, SC_EDP, INVALID_TIMER);
 		}
 	}

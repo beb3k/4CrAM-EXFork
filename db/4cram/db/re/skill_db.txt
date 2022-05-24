@@ -154,17 +154,17 @@
 // Sky Emperor
 5463,0,0,0,0,0,0,10,0,no,0,0,0,none,0,0,0,	SKE_SKY_MASTERY,Sky Mastery
 5464,0,0,0,0,0,0,10,0,no,0,0,0,none,0,0,0,	SKE_WAR_BOOK_MASTERY,War Book Mastery
-5465,2,6,1,0,0,0,5,1,yes,0,0,0,none,0,0,0,	SKE_RISING_SUN,Rising Sun
-5466,2,6,1,0,0,0,5,1,yes,0,0,0,none,0,0,0,	SKE_NOON_BLAST,Noon Blast
-5467,2,6,1,0,0,0,5,1,yes,0,0,0,none,0,0,0,	SKE_SUNSET_BLAST,Sunset Blast
-5468,0,6,4,0,0,0,5,1,yes,0,0,0,none,0,0,0,	SKE_RISING_MOON,Rising Moon
-5469,0,6,4,0,0,0,5,1,yes,0,0,0,none,0,0,0,	SKE_MIDNIGHT_KICK,Midnight Kick
-5470,0,6,4,0,0,0,5,1,yes,0,0,0,none,0,0,0,	SKE_DAWN_BREAK,Dawn Break
-5471,0,6,4,0,0,0,5,1,yes,0,0,0,none,0,0,0,	SKE_TWINKLING_GALAXY,Twinkling Galaxy
-5472,1,6,1,0,0,0,5,1,yes,0,0,0,none,0,0,0,	SKE_STAR_BURST,Star Burst
-5473,0,6,4,0,0,0,5,1,yes,0,0,0,none,0,0,0,	SKE_STAR_CANNON,Star Cannon
-5474,9,6,1,0,0,0,10,1,yes,0,0,0,none,0,0,0,	SKE_ALL_IN_THE_SKY,All In The Sky
-5475,0,6,4,0,0,0,10,1,yes,0,0,0,none,0,0,0,	SKE_ENCHANTING_SKY,Enchanting Sky
+5465,2,8,1,-1,0,0,5,-2,yes,0,0,0,weapon,0,0,0,	SKE_RISING_SUN,Rising Sun
+5466,2,8,1,-1,0x2,1:1:2:2:3,5,-2,yes,0,0,0,weapon,0,0,0,	SKE_NOON_BLAST,Noon Blast// Crit part must be hard coded.
+5467,2,8,1,-1,0x2,1:1:2:2:3,5,-2,yes,0,0,0,weapon,0,0,0,	SKE_SUNSET_BLAST,Sunset Blast// Crit part must be hard coded.
+5468,0,8,4,-1,0x2,2:2:3:3:4,5,-2,yes,0,0,0,weapon,0,0,0,	SKE_RISING_MOON,Rising Moon
+5469,0,8,4,-1,0x2,2:2:3:3:4,5,-2,yes,0,0,0,weapon,0,0,0,	SKE_MIDNIGHT_KICK,Midnight Kick
+5470,0,8,4,-1,0x2,2:2:3:3:4,5,-2,yes,0,0,0,weapon,0,0,0,	SKE_DAWN_BREAK,Dawn Break
+5471,0,8,4,-1,0,6:6:5:5:4,5,-3,yes,0,0,0,weapon,0,0,0,	SKE_TWINKLING_GALAXY,Twinkling Galaxy// Status ID 1404 triggers.
+5472,1,8,1,-1,0x2,2,5,-2,yes,0,0,0,weapon,0,0,0,	SKE_STAR_BURST,Star Burst// Status ID 1404 ends. Unit ID 2409 appears?
+5473,0,8,4,-1,0,6:6:5:5:4,5,-3,yes,0,0,0,weapon,0,0,0,	SKE_STAR_CANNON,Star Cannon// Status ID 1406 triggers.
+5474,9,6,1,-1,0x100,0,10,1,yes,0,0,0,weapon,0,0,0,	SKE_ALL_IN_THE_SKY,All In The Sky// High jump packet used for jump.
+5475,0,6,4,0,0x1,0,10,1,yes,0,0,0,none,0,0,0,	SKE_ENCHANTING_SKY,Enchanting Sky
 
 // Shinkiro/Shiranui
 5476,5,6,2,0,0,0,5,1,yes,0,0,0,none,0,0,0,	SS_TOKEDASU,Melt Away

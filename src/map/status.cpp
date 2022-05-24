@@ -3799,6 +3799,8 @@ int status_calc_pc_sub(struct map_session_data* sd, uint8 opt)
 		base_status->hit += 20;
 	if ((skill = pc_checkskill_imperial_guard(sd, 2)) > 0)// IG_SPEAR_SWORD_M
 		base_status->hit += skill * 3;
+	if ((skill = pc_checkskill(sd, SKE_WAR_BOOK_MASTERY)) > 0 && sd->status.weapon == W_BOOK)
+		base_status->hit += skill * 3;
 
 	if ((skill = pc_checkskill(sd, SU_SOULATTACK)) > 0)
 		base_status->rhw.range += skill_get_range2(&sd->bl, SU_SOULATTACK, skill, true);
@@ -3837,6 +3839,8 @@ int status_calc_pc_sub(struct map_session_data* sd, uint8 opt)
 		base_status->patk += skill * 3;
 		base_status->smatk += skill * 3;
 	}
+	if ((skill = pc_checkskill(sd, SKE_WAR_BOOK_MASTERY)) > 0 && sd->status.weapon == W_BOOK)
+		base_status->patk += 2 + skill;
 
 // ----- PHYSICAL RESISTANCE CALCULATION -----
 	if ((skill = pc_checkskill_imperial_guard(sd, 1)) > 0)// IG_SHIELD_MASTERY
