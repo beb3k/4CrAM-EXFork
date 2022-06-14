@@ -2456,6 +2456,7 @@ static int battle_range_type(struct block_list *src, struct block_list *target, 
 		case MT_RUSH_QUAKE: // 9 cell cast range.
 		case ABC_UNLUCKY_RUSH: // 7 cell cast range.
 		//case ABC_DEFT_STAB: // 2 cell cast range???
+		case SKE_ALL_IN_THE_SKY:
 			return BF_SHORT;
 		case CD_PETITIO: { // Skill range is 2 but damage is melee with books and ranged with mace.
 			map_session_data *sd = BL_CAST(BL_PC, src);
@@ -2809,6 +2810,15 @@ static bool is_attack_critical(struct Damage* wd, struct block_list *src, struct
 			case WH_GALESTORM:
 				if (sc && !sc->data[SC_CALAMITYGALE])
 					return false;
+				break;
+			case SKE_NOON_BLAST:
+				if (sc && !(sc->data[SC_NOON_SUN] || sc->data[SC_SKY_ENCHANT]))
+					return false;
+				break;
+			case SKE_SUNSET_BLAST:
+				if (sc && !(sc->data[SC_SUNSET_SUN] || sc->data[SC_SKY_ENCHANT]))
+					return false;
+				break;
 		}
 		if(tsd && tsd->bonus.critical_def)
 			cri = cri * ( 100 - tsd->bonus.critical_def ) / 100;
@@ -5342,13 +5352,13 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case SKE_MIDNIGHT_KICK:
 			skillratio += 400 + 1000 * skill_lv + 5 * skill_lv * (sd ? pc_checkskill(sd, SKE_SKY_MASTERY) : 10) + 5 * sstatus->pow;
-			if (sc && sc->data[SC_MIDNIGHT_MOON])
+			if (sc && (sc->data[SC_MIDNIGHT_MOON] || sc->data[SC_SKY_ENCHANT]))
 				skillratio += 1000 + 200 * skill_lv;
 			RE_LVL_DMOD(100);
 			break;
 		case SKE_DAWN_BREAK:
 			skillratio += 200 + 400 * skill_lv + 5 * skill_lv * (sd ? pc_checkskill(sd, SKE_SKY_MASTERY) : 10) + 5 * sstatus->pow;
-			if (sc && sc->data[SC_DAWN_MOON])
+			if (sc && (sc->data[SC_DAWN_MOON] || sc->data[SC_SKY_ENCHANT]))
 				skillratio += 200 * skill_lv;
 			RE_LVL_DMOD(100);
 			break;

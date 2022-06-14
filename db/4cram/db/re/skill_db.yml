@@ -38,6 +38,7 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -59,6 +60,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -80,6 +82,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -101,6 +104,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -122,6 +126,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -143,6 +148,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -164,6 +170,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -185,6 +192,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -273,6 +281,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 2
     CastCancel: true
     Requires:
       SpCost:
@@ -294,6 +303,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 2
     CastCancel: true
     Requires:
       SpCost:
@@ -315,6 +325,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 2
     CastCancel: true
     Requires:
       SpCost:
@@ -416,6 +427,7 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
+    GiveAp: 2
     CastCancel: true
     Requires:
       SpCost:
@@ -437,6 +449,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -457,6 +470,7 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -478,6 +492,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -499,6 +514,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -520,6 +536,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -602,6 +619,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -626,6 +644,7 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
+    GiveAp: 2
     CastCancel: true
     Requires:
       SpCost:
@@ -650,6 +669,7 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -678,6 +698,7 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -702,6 +723,7 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
+    GiveAp: 2
     CastCancel: true
     Requires:
       SpCost:
@@ -722,6 +744,7 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
+    GiveAp: 2
     CastCancel: true
     Requires:
       SpCost:
@@ -781,6 +804,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 3
     CastCancel: true
     Requires:
       SpCost:
@@ -814,6 +838,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -870,6 +895,7 @@ Body:
     Range: 2
     Hit: Single
     HitCount: 1
+    GiveAp: 2
     CastCancel: true
     Requires:
       SpCost:
@@ -901,6 +927,7 @@ Body:
     Range: 2
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -952,6 +979,7 @@ Body:
         Size: 11
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -983,6 +1011,7 @@ Body:
     Range: 7
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -1014,6 +1043,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 3
     CastCancel: true
     Requires:
       SpCost:
@@ -1045,6 +1075,7 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
+    GiveAp: 2
     CastCancel: true
     Requires:
       SpCost:
@@ -1076,6 +1107,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 3
     CastCancel: true
     Requires:
       SpCost:
@@ -1114,6 +1146,7 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -1144,6 +1177,7 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
+    GiveAp: 5
     CastCancel: true
     Requires:
       SpCost:
@@ -1183,6 +1217,7 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -1270,6 +1305,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
+      Critical: true
     Range: 2
     Hit: Multi_Hit
     HitCount: -2
@@ -1285,6 +1321,7 @@ Body:
         Area: 2
       - Level: 5
         Area: 3
+    GiveAp: 2
     CastCancel: true
     AfterCastActDelay: 500
     Cooldown: 700
@@ -1308,6 +1345,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
+      Critical: true
     Range: 2
     Hit: Multi_Hit
     HitCount: -2
@@ -1323,6 +1361,7 @@ Body:
         Area: 2
       - Level: 5
         Area: 3
+    GiveAp: 2
     CastCancel: true
     AfterCastActDelay: 500
     Cooldown: 300
@@ -1398,6 +1437,7 @@ Body:
         Area: 3
       - Level: 5
         Area: 4
+    GiveAp: 2
     CastCancel: true
     CastTime: 1000
     Cooldown: 700
@@ -1436,6 +1476,7 @@ Body:
         Area: 3
       - Level: 5
         Area: 4
+    GiveAp: 2
     CastCancel: true
     CastTime: 1000
     Cooldown: 300
@@ -1481,8 +1522,9 @@ Body:
       SpCost: 30
     Unit:
       Id: Twinkling_Galaxy
+      AlternateId: Dummyskill
       Range: 2
-      Interval: 1000
+      Interval: 300
       Target: Enemy
       Flag:
         PathCheck: true
@@ -1493,12 +1535,14 @@ Body:
     Type: Weapon
     TargetType: Attack
     DamageFlags:
+      NoDamage: true
       Splash: true
     Range: 1
     Hit: Multi_Hit
     HitCount: -2
     Element: Weapon
     SplashArea: 2
+    GiveAp: 3
     CastCancel: true
     AfterCastActDelay: 500
     Duration1: 4500
@@ -1516,6 +1560,11 @@ Body:
           Amount: 53
         - Level: 5
           Amount: 57
+    Unit:
+      Id: Dummyskill
+      Range: 2
+      Interval: 300
+      Target: Enemy
   - Id: 5473
     Name: SKE_STAR_CANNON
     Description: Star Cannon
@@ -1536,6 +1585,7 @@ Body:
         Area: 5
       - Level: 5
         Area: 4
+    GiveAp: 3
     CastCancel: true
     Duration1: 4500
     Cooldown: 5000
@@ -1554,8 +1604,9 @@ Body:
           Amount: 45
     Unit:
       Id: Star_Cannon
+      AlternateId: Dummyskill
       Range: 3
-      Interval: 1000
+      Interval: 300
       Target: Enemy
       Flag:
         PathCheck: true
@@ -1674,6 +1725,7 @@ Body:
     Range: 2
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -1704,6 +1756,7 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -1766,6 +1819,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 2
     CastCancel: true
     Requires:
       SpCost:
@@ -1836,6 +1890,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    GiveAp: 1
     CastCancel: true
     Requires:
       SpCost:
@@ -1982,7 +2037,7 @@ Body:
           Amount: 62
   - Id: 5491
     Name: SS_KINRYUUHOU
-    Description: Golden Dragon Canno
+    Description: Golden Dragon Cannon
     MaxLevel: 10
     TargetType: Attack
     Range: 13
@@ -2018,6 +2073,7 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
+    GiveAp: 2
     CastCancel: true
     Requires:
       SpCost:

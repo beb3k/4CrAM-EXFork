@@ -43,22 +43,122 @@ Header:
   Type: STATUS_DB
   Version: 2
 
-Footer:
-  Imports:
-  - Path: db/pre-re/status.yml
-    Mode: Prerenewal
-  - Path: db/re/status.yml
-    Mode: Renewal
-  - Path: db/4cram/db/re/status_ske.yml
-    Mode: Renewal
-#  - Path: db/4cram/db/re/status_soa.yml
-#    Mode: Renewal
-#  - Path: db/4cram/db/re/status_ss.yml
-#    Mode: Renewal
-#  - Path: db/4cram/db/re/status_nw.yml
-#    Mode: Renewal
-#  - Path: db/4cram/db/re/status_hn.yml
-#    Mode: Renewal
-#  - Path: db/4cram/db/re/status_sh.yml
-#    Mode: Renewal
-  - Path: db/import/status.yml
+Body:
+  - Status: Rising_Sun
+    Icon: EFST_RISING_SUN
+    DurationLookup: SKE_RISING_SUN
+    Flags:
+      NoDispell: true
+      NoClearance: true
+      NoBanishingBuster: true
+    Fail:
+      Sky_Enchant: true
+    End:
+      Noon_Sun: true
+      Sunset_Sun: true
+      Rising_Moon: true
+      Midnight_Moon: true
+      Dawn_Moon: true
+
+  - Status: Noon_Sun
+    Icon: EFST_NOON_SUN
+    DurationLookup: SKE_RISING_SUN
+    Flags:
+      NoDispell: true
+      NoClearance: true
+      NoBanishingBuster: true
+    Fail:
+      Sky_Enchant: true
+    End:
+      Rising_Sun: true
+      Sunset_Sun: true
+      Rising_Moon: true
+      Midnight_Moon: true
+      Dawn_Moon: true
+
+  - Status: Sunset_Sun
+    Icon: EFST_SUNSET_SUN
+    DurationLookup: SKE_RISING_SUN
+    Flags:
+      NoDispell: true
+      NoClearance: true
+      NoBanishingBuster: true
+    Fail:
+      Sky_Enchant: true
+    End:
+      Rising_Sun: true
+      Noon_Sun: true
+      Rising_Moon: true
+      Midnight_Moon: true
+      Dawn_Moon: true
+
+  - Status: Rising_Moon
+    Icon: EFST_RISING_MOON
+    DurationLookup: SKE_RISING_MOON
+    Flags:
+      NoDispell: true
+      NoClearance: true
+      NoBanishingBuster: true
+    Fail:
+      Sky_Enchant: true
+    End:
+      Rising_Sun: true
+      Noon_Sun: true
+      Sunset_Sun: true
+      Midnight_Moon: true
+      Dawn_Moon: true
+
+  - Status: Midnight_Moon
+    Icon: EFST_MIDNIGHT_MOON
+    DurationLookup: SKE_RISING_MOON
+    Flags:
+      NoDispell: true
+      NoClearance: true
+      NoBanishingBuster: true
+    Fail:
+      Sky_Enchant: true
+    End:
+      Rising_Sun: true
+      Noon_Sun: true
+      Sunset_Sun: true
+      Rising_Moon: true
+      Dawn_Moon: true
+
+  - Status: Dawn_Moon
+    Icon: EFST_DAWN_MOON
+    DurationLookup: SKE_RISING_MOON
+    Flags:
+      NoDispell: true
+      NoClearance: true
+      NoBanishingBuster: true
+    Fail:
+      Sky_Enchant: true
+    End:
+      Rising_Sun: true
+      Noon_Sun: true
+      Sunset_Sun: true
+      Rising_Moon: true
+      Midnight_Moon: true
+
+  - Status: Star_Burst
+    Icon: EFST_STAR_BURST
+    DurationLookup: SKE_STAR_BURST
+    Flags:
+      NoDispell: true
+      NoClearance: true
+      NoBanishingBuster: true
+
+  - Status: Sky_Enchant
+    Icon: EFST_SKY_ENCHANT
+    DurationLookup: SKE_ENCHANTING_SKY
+    Flags:
+      NoDispell: true
+      NoClearance: true
+      NoBanishingBuster: true
+    End:
+      Rising_Sun: true
+      Noon_Sun: true
+      Sunset_Sun: true
+      Rising_Moon: true
+      Midnight_Moon: true
+      Dawn_Moon: true

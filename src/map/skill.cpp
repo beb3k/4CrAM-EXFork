@@ -5069,6 +5069,26 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 		break;
 
+	case SKE_RISING_SUN:
+		skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
+
+		if (sc)
+		{// No effect if Sunset Sun, Rising Moon, Midnight Moon, or Sky Enchant is active.
+			if (sc->data[SC_SUNSET_SUN] || sc->data[SC_RISING_MOON] || sc->data[SC_MIDNIGHT_MOON] || sc->data[SC_SKY_ENCHANT])
+			{
+				// Dummy spot to end process.
+			}
+			else if (sc->data[SC_NOON_SUN])// Switch Noon Sun -> Sunset Sun.
+				sc_start(src, src, SC_SUNSET_SUN, 100, skill_lv, skill_get_time(skill_id, skill_lv));
+			else if (sc->data[SC_RISING_SUN])// Switch Rising Sun -> Noon Sun.
+				sc_start(src, src, SC_NOON_SUN, 100, skill_lv, skill_get_time(skill_id, skill_lv));
+			else// Start Rising Sun or switch Dawn Moon -> Rising Sun.
+				sc_start(src, src, SC_RISING_SUN, 100, skill_lv, skill_get_time(skill_id, skill_lv));
+		}
+		else// Cycle not active? Start Rising Sun.
+			sc_start(src, src, SC_RISING_SUN, 100, skill_lv, skill_get_time(skill_id, skill_lv));
+		break;
+
 	case IG_SHIELD_SHOOTING:
 		clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
 		skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
@@ -5511,6 +5531,11 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case EM_ELEMENTAL_BUSTER_WIND:
 	case EM_ELEMENTAL_BUSTER_GROUND:
 	case EM_ELEMENTAL_BUSTER_POISON:
+	case SKE_NOON_BLAST:
+	case SKE_SUNSET_BLAST:
+	case SKE_RISING_MOON:
+	case SKE_MIDNIGHT_KICK:
+	case SKE_DAWN_BREAK:
 	case EM_EL_FLAMEROCK:
 	case EM_EL_AGE_OF_ICE:
 	case EM_EL_STORM_WIND:
@@ -5626,6 +5651,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				case CD_FRAMEN:
 				case ABC_DEFT_STAB:
 				case ABC_CHAIN_REACTION_SHOT:
+				case SKE_NOON_BLAST:
+				case SKE_SUNSET_BLAST:
 				case EM_EL_FLAMEROCK:
 				case EM_EL_AGE_OF_ICE:
 				case EM_EL_STORM_WIND:
@@ -7641,6 +7668,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case TR_MYSTIC_SYMPHONY:
 	case TR_KVASIR_SONATA:
 	case EM_SPELL_ENCHANTING:
+	case SKE_ENCHANTING_SKY:
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
@@ -8214,6 +8242,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SHC_IMPACT_CRATER:
 	case MT_AXE_STOMP:
 	case ABC_ABYSS_DAGGER:
+	case SKE_RISING_MOON:
+	case SKE_MIDNIGHT_KICK:
+	case SKE_DAWN_BREAK:
 	{
 		struct status_change *sc = status_get_sc(src);
 		int starget = BL_CHAR|BL_SKILL;
@@ -8239,6 +8270,25 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 		if (skill_id == IQ_MASSIVE_F_BLASTER || skill_id == SHC_IMPACT_CRATER || skill_id == MT_AXE_STOMP || skill_id == ABC_ABYSS_DAGGER)
 			sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv));
+
+		if (skill_id == SKE_RISING_MOON)
+		{
+			if (sc && sc->count)
+			{// No effect if Dawn Moon, Rising Sun, Noon Sun, or Sky Enchant is active.
+				if (sc->data[SC_DAWN_MOON] || sc->data[SC_RISING_SUN] || sc->data[SC_NOON_SUN] || sc->data[SC_SKY_ENCHANT])
+				{
+					// Dummy spot to end process.
+				}
+				else if (sc->data[SC_MIDNIGHT_MOON])// Switch Midnight Moon -> Dawn Moon.
+					sc_start(src, src, SC_DAWN_MOON, 100, skill_lv, skill_get_time(skill_id, skill_lv));
+				else if (sc->data[SC_RISING_MOON])// Switch Rising Moon -> Midnight Moon.
+					sc_start(src, src, SC_MIDNIGHT_MOON, 100, skill_lv, skill_get_time(skill_id, skill_lv));
+				else// Start Rising Moon or switch Sunset Sun -> Rising Moon.
+					sc_start(src, src, SC_RISING_MOON, 100, skill_lv, skill_get_time(skill_id, skill_lv));
+			}
+			else// Cycle not active? Start Rising Moon.
+				sc_start(src, src, SC_RISING_MOON, 100, skill_lv, skill_get_time(skill_id, skill_lv));
+		}
 
 		skill_area_temp[1] = 0;
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
@@ -12691,6 +12741,9 @@ TIMER_FUNC(skill_castend_id){
 			case WL_FROSTMISTY:
 			case SU_CN_POWDERING:
 			case AG_RAIN_OF_CRYSTAL:
+			case SKE_TWINKLING_GALAXY:
+			case SKE_STAR_BURST:
+			case SKE_STAR_CANNON:
 				ud->skillx = target->x;
 				ud->skilly = target->y;
 				ud->skilltimer = tid;
@@ -13607,6 +13660,13 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 		flag|=1;
 		break;
 
+	case SKE_STAR_BURST:
+		skill_clear_unitgroup(src);
+		if ((sg = skill_unitsetting(src, skill_id, skill_lv, src->x, src->y, 0)))
+			sc_start4(src, src, type, 100, skill_lv, 0, 0, sg->group_id, skill_get_time(skill_id, skill_lv));
+		flag |= 1;
+		break;
+
 	case PA_GOSPEL:
 		if (sce && sce->val4 == BCT_SELF)
 		{
@@ -13991,6 +14051,32 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 				skill_unitsetting(src, AG_ALL_BLOOM_ATK2, skill_lv, x, y, flag + i * unit_interval);
 		}
 		break;
+
+	case SKE_TWINKLING_GALAXY:
+	case SKE_STAR_CANNON:
+	{
+		int area = skill_get_splash(skill_id, skill_lv);
+		short tmpx = 0, tmpy = 0, star_group_max = 1, star_group_num;
+
+		// Display star field.
+		skill_unitsetting(src, skill_id, skill_lv, x, y, 0);
+
+		// Sets multi-star dropping for Star Cannon.
+		if (skill_id == SKE_STAR_CANNON)
+			star_group_max = (3 + skill_lv) / 2;
+
+		for (star_group_num = 1; star_group_num <= star_group_max; star_group_num++)
+		{
+			for (i = 1; i <= skill_get_time(skill_id, skill_lv) / skill_get_unit_interval(skill_id); i++)
+			{
+				// Creates a random Cell in the Splash Area
+				tmpx = x - area + rnd() % (area * 2 + 1);
+				tmpy = y - area + rnd() % (area * 2 + 1);
+				skill_unitsetting(src, skill_id, skill_lv, tmpx, tmpy, flag + i * skill_get_unit_interval(skill_id));
+			}
+		}
+	}
+	break;
 
 	default:
 		ShowWarning("skill_castend_pos2: Unknown skill used:%d\n",skill_id);
@@ -14648,6 +14734,20 @@ std::shared_ptr<s_skill_unit_group> skill_unitsetting(struct block_list *src, ui
 	case WH_SWIFTTRAP:
 	case WH_FLAMETRAP:
 		limit += 3000 * (sd ? pc_checkskill(sd, WH_ADVANCED_TRAP) : 5);
+		break;
+	case SKE_TWINKLING_GALAXY:
+	case SKE_STAR_CANNON:
+		// Flag 0 = Display star field.
+		// Flag > 0 = Use dummy unit for set damage areas.
+		if (flag > 0)
+		{
+			limit = flag;
+			flag = 1;
+		}
+		else
+		{// Set star field range to the drop zone side. Needed for Star Burst/Cannon checks.
+			range = skill_get_splash(skill_id,skill_lv);
+		}
 		break;
 	}
 
@@ -17341,6 +17441,30 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 		case IQ_THIRD_FLAME_BOMB:
 			if (!(sc && sc->data[SC_THIRD_EXOR_FLAME]))
 				return false;
+			break;
+		case SKE_NOON_BLAST:
+			if (!(sc && (sc->data[SC_RISING_SUN] || sc->data[SC_NOON_SUN] || sc->data[SC_SKY_ENCHANT]))) {
+				clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
+				return false;
+			}
+			break;
+		case SKE_SUNSET_BLAST:
+			if (!(sc && (sc->data[SC_NOON_SUN] || sc->data[SC_SUNSET_SUN] || sc->data[SC_SKY_ENCHANT]))) {
+				clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
+				return false;
+			}
+			break;
+		case SKE_MIDNIGHT_KICK:
+			if (!(sc && (sc->data[SC_RISING_MOON] || sc->data[SC_MIDNIGHT_MOON] || sc->data[SC_SKY_ENCHANT]))) {
+				clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
+				return false;
+			}
+			break;
+		case SKE_DAWN_BREAK:
+			if (!(sc && (sc->data[SC_MIDNIGHT_MOON] || sc->data[SC_DAWN_MOON] || sc->data[SC_SKY_ENCHANT]))) {
+				clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
+				return false;
+			}
 			break;
 	}
 
@@ -20280,6 +20404,15 @@ int skill_delunitgroup_(std::shared_ptr<s_skill_unit_group> group, const char* f
 				}
 			}
 			break;
+		case SKE_STAR_BURST: {
+				status_change* sc = status_get_sc(src);
+
+				if (sc && sc->data[SC_STAR_BURST]) {
+					sc->data[SC_STAR_BURST]->val4 = 0;
+					status_change_end(src, SC_STAR_BURST, INVALID_TIMER);
+				}
+			}
+			break;
 		case LG_BANDING: {
 				status_change *sc = status_get_sc(src);
 
@@ -20608,7 +20741,8 @@ static int skill_unit_timer_sub(DBKey key, DBData *data, va_list ap)
 
 			default:
 				if (group->val2 == 1 && (group->skill_id == WZ_METEOR || group->skill_id == SU_CN_METEOR || group->skill_id == SU_CN_METEOR2 || 
-					group->skill_id == AG_VIOLENT_QUAKE_ATK || group->skill_id == AG_ALL_BLOOM_ATK || group->skill_id == AG_ALL_BLOOM_ATK2)) {
+					group->skill_id == AG_VIOLENT_QUAKE_ATK || group->skill_id == AG_ALL_BLOOM_ATK || group->skill_id == AG_ALL_BLOOM_ATK2 ||
+					group->skill_id == SKE_TWINKLING_GALAXY || group->skill_id == SKE_STAR_CANNON)) {
 					// Deal damage before expiration
 					break;
 				}
@@ -20664,7 +20798,8 @@ static int skill_unit_timer_sub(DBKey key, DBData *data, va_list ap)
 				break;
 			default:
 				if (group->skill_id == WZ_METEOR || group->skill_id == SU_CN_METEOR || group->skill_id == SU_CN_METEOR2 || 
-					group->skill_id == AG_VIOLENT_QUAKE_ATK || group->skill_id == AG_ALL_BLOOM_ATK || group->skill_id == AG_ALL_BLOOM_ATK2) {
+					group->skill_id == AG_VIOLENT_QUAKE_ATK || group->skill_id == AG_ALL_BLOOM_ATK || group->skill_id == AG_ALL_BLOOM_ATK2 ||
+					group->skill_id == SKE_TWINKLING_GALAXY || group->skill_id == SKE_STAR_CANNON) {
 					if (group->val2 == 0 && (DIFF_TICK(tick, group->tick) >= group->limit - group->interval || DIFF_TICK(tick, group->tick) >= unit->limit - group->interval)) {
 						// Unit will expire the next interval, start dropping Meteor
 						block_list *src = map_id2bl(group->src_id);
@@ -20672,6 +20807,10 @@ static int skill_unit_timer_sub(DBKey key, DBData *data, va_list ap)
 						if (src != nullptr) {
 							if (group->skill_id == AG_VIOLENT_QUAKE_ATK || group->skill_id == AG_ALL_BLOOM_ATK || group->skill_id == AG_ALL_BLOOM_ATK2)
 								clif_skill_poseffect(src, group->skill_id, -1, bl->x, bl->y, tick); // Don't yell a blank skill name.
+							else if (group->skill_id == SKE_TWINKLING_GALAXY || group->skill_id == SKE_STAR_CANNON)
+							{
+								// Do no clif_skill_poseffect.
+							}
 							else
 								clif_skill_poseffect(src, group->skill_id, group->skill_lv, bl->x, bl->y, tick);
 							group->val2 = 1;
@@ -20705,7 +20844,8 @@ static int skill_unit_timer_sub(DBKey key, DBData *data, va_list ap)
 			}
 		}
 		else if (group->skill_id == WZ_METEOR || group->skill_id == SU_CN_METEOR || group->skill_id == SU_CN_METEOR2 || 
-			group->skill_id == AG_VIOLENT_QUAKE_ATK || group->skill_id == AG_ALL_BLOOM_ATK || group->skill_id == AG_ALL_BLOOM_ATK2 ||
+			group->skill_id == AG_VIOLENT_QUAKE_ATK || group->skill_id == AG_ALL_BLOOM_ATK || group->skill_id == AG_ALL_BLOOM_ATK2 || 
+			group->skill_id == SKE_TWINKLING_GALAXY || group->skill_id == SKE_STAR_CANNON || 
 			((group->skill_id == CR_GRANDCROSS || group->skill_id == NPC_GRANDDARKNESS) && unit->val1 <= 0)) {
 			skill_delunit(unit);
 			return 0;

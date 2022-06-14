@@ -916,7 +916,7 @@ StateIconList[EFST_IDs.EFST_TRUESIGHT] = {
 	descript = {
 		{ "트루 사이트 (True Sight)", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "모든 스테이터스 증가" },
+		{ "모든 기본 스테이터스 증가" },
 		{ "명중률, 데미지, 크리티컬 증가" }
 	}
 }
@@ -1422,7 +1422,7 @@ StateIconList[EFST_IDs.EFST_HARMONIZE] = {
 	descript = {
 		{ "하모나이즈", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "스테이터스 가중치 조정" }
+		{ "기본 스테이터스 가중치 조정" }
 	}
 }
 StateIconList[EFST_IDs.EFST_CHASEWALK2] = {
@@ -1714,7 +1714,7 @@ StateIconList[EFST_IDs.EFST_MARIONETTE_MASTER] = {
 		{ "마리오네뜨 컨트롤 (시전)", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
 		{ "대상 플레이어에게" },
-		{ "스테이터스를 넘긴 상태" }
+		{ "기본 스테이터스를 넘긴 상태" }
 	}
 }
 StateIconList[EFST_IDs.EFST_MARIONETTE] = {
@@ -1724,7 +1724,7 @@ StateIconList[EFST_IDs.EFST_MARIONETTE] = {
 		{ "마리오네뜨 컨트롤 (대상)", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
 		{ "시전 플레이어에게" },
-		{ "스테이터스를 받은 상태" }
+		{ "기본 스테이터스를 받은 상태" }
 	}
 }
 StateIconList[EFST_IDs.EFST_WZ_SIGHTBLASTER] = {
@@ -1894,7 +1894,7 @@ StateIconList[EFST_IDs.EFST_PRESTIGE] = {
 	descript = {
 		{ "프레스티지", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "스탯에 따른 마법 회피율 적용" },
+		{ "기본 스테이터스에 따른 마법 회피율 적용" },
 		{ "방어력 상승" }
 	}
 }
@@ -2086,7 +2086,7 @@ StateIconList[EFST_IDs.EFST_STOMACHACHE] = {
 	descript = {
 		{ "복통", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "All Status 가중치 감소" },
+		{ "모든 기본 스테이터스 가중치 감소" },
 		{ "이동속도 감소" },
 		{ "10초당 한 번씩 /앉기 발생" },
 		{ "10초당 일정량의 SP 소모" }
@@ -2535,7 +2535,7 @@ StateIconList[EFST_IDs.EFST_2011RWC] = {
 	descript = {
 		{ "응원 폭죽", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "모든 스테이터스 증가" },
+		{ "모든 기본 스테이터스 증가" },
 		{ "ATK, MATK 증가" }
 	}
 }
@@ -3090,7 +3090,7 @@ StateIconList[EFST_IDs.EFST_FULL_THROTTLE] = {
 	descript = {
 		{ "풀 스로틀", COLOR_TITLE_BUFF },
 		{ "이동속도 증가" },
-		{ "All State 증가" },
+		{ "모든 기본 스테이터스 증가" },
 		{ "%s", COLOR_TIME }
 	}
 }
@@ -3156,7 +3156,7 @@ StateIconList[EFST_IDs.EFST_JITTER_BUFF5] = {
 	posTimeLimitStr = 3,
 	descript = {
 		{ "아랑의 천진난만함", COLOR_TITLE_BUFF },
-		{ "스킬 후딜레이 감소" },
+		{ "글로벌 쿨타임 감소" },
 		{ "%s", COLOR_TIME }
 	}
 }
@@ -3347,7 +3347,7 @@ StateIconList[EFST_IDs.EFST_ZONGZI_POUCH_TRANS] = {
 	posTimeLimitStr = 3,
 	descript = {
 		{ "단오절 축제", COLOR_TITLE_BUFF },
-		{ "모든 스테이터스 증가." },
+		{ "모든 기본 스테이터스 증가." },
 		{ "%s", COLOR_TIME }
 	}
 }
@@ -3510,7 +3510,7 @@ StateIconList[EFST_IDs.EFST_CHUSEOK_WEEKEND] = {
 StateIconList[EFST_IDs.EFST_JUMPINGCLAN] = {
 	descript = {
 		{ "점핑 클랜", COLOR_TITLE_BUFF },
-		{ "All State + 1." }
+		{ "모든 기본 스테이터스 + 1." }
 	}
 }
 StateIconList[EFST_IDs.EFST_ESSENCE_OF_TIME] = {
@@ -4226,9 +4226,9 @@ StateIconList[EFST_IDs.EFST_KIEL_CARD] = {
 	haveTimeLimit = 1,
 	posTimeLimitStr = 2,
 	descript = {
-		{ "스킬 후딜레이 감소", COLOR_TITLE_BUFF },
+		{ "글로벌 쿨타임 감소", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "스킬 후 딜레이 -15%" }
+		{ "글로벌 쿨타임 -15%" }
 	}
 }
 StateIconList[EFST_IDs.EFST_AID_PERIOD_RECEIVEITEM] = {
@@ -4355,7 +4355,7 @@ StateIconList[EFST_IDs.EFST_CHEERUP] = {
 	descript = {
 		{ "엄마 아빠 힘내세요.", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "모든 스테이터스 3만큼 증가" }
+		{ "모든 기본 스테이터스 3만큼 증가" }
 	}
 }
 StateIconList[EFST_IDs.EFST_LHZ_DUN_N1] = {
@@ -4522,7 +4522,7 @@ StateIconList[EFST_IDs.EFST_UNIVERSESTANCE] = {
 	descript = {
 		{ "우주의 자세", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "모든 스테이터스 증가" },
+		{ "모든 기본 스테이터스 증가" },
 		{ "우주 계열 스킬 사용 가능" },
 		{ "태양 계열 스킬 사용 가능" },
 		{ "달 계열 스킬 사용 가능" },
@@ -4655,7 +4655,7 @@ StateIconList[EFST_IDs.EFST_SOULGOLEM] = {
 StateIconList[EFST_IDs.EFST_SOULDIVISION] = {
 	descript = {
 		{ "영혼 분열", COLOR_TITLE_DEBUFF },
-		{ "스킬 후 딜레이 증가" }
+		{ "글로벌 쿨타임 증가" }
 	}
 }
 StateIconList[EFST_IDs.EFST_FALLINGSTAR] = {
@@ -4714,9 +4714,9 @@ StateIconList[EFST_IDs.EFST_ALL_STAT_DOWN] = {
 	haveTimeLimit = 1,
 	posTimeLimitStr = 2,
 	descript = {
-		{ "올 스텟 감소", COLOR_TITLE_DEBUFF },
+		{ "모든 기본 스테이터스 감소", COLOR_TITLE_DEBUFF },
 		{ "%s", COLOR_TIME },
-		{ "모든 스테이터스 감소." }
+		{ "모든 기본 스테이터스 감소." }
 	}
 }
 StateIconList[EFST_IDs.EFST_GRADUAL_GRAVITY] = {
@@ -4855,7 +4855,7 @@ StateIconList[EFST_IDs.EFST_POEMBRAGI] = {
 		{ "브라기의 시", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
 		{ "파티원의 변동 캐스팅 감소." },
-		{ "스킬 후 딜레이 감소." }
+		{ "글로벌 쿨타임 감소." }
 	}
 }
 StateIconList[EFST_IDs.EFST_ASSASSINCROSS] = {
@@ -5971,7 +5971,7 @@ StateIconList[EFST_IDs.EFST_INSPIRATION] = {
 	descript = {
 		{ "인스피레이션", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "명중률, 스테이터스 상승" },
+		{ "명중률, 기본 스테이터스 상승" },
 		{ "공격력, 마법공격력, MHP 증가" },
 		{ "특정 버프, 상태이상 무효화" },
 		{ "지속적으로 HP, SP 감소" }
@@ -6251,7 +6251,7 @@ StateIconList[EFST_IDs.EFST_NOODLE_FES_3] = {
 	descript = {
 		{ "국수 축제 - 토마토 국수", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "변동 캐스팅, 스킬 후 딜레이 감소" },
+		{ "변동 캐스팅, 글로벌 쿨타임 감소" },
 		{ "공격속도 증가(공격 후 딜레이 감소)" }
 	}
 }
@@ -6836,5 +6836,45 @@ StateIconList[EFST_IDs.EFST_VR_MDEF] = {
 		{ "MDEF 증가", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
 		{ "MDEF 증가" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK001] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "주인공 버프", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "INT + 5" },
+		{ "FLEE + 30" },
+		{ "이동속도 증가 버프 부여" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK002] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "주인공 버프", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "MHP + 10%" },
+		{ "MSP + 5%" },
+		{ "노란허브의 회복력 500% 증가" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK003] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "주인공 버프", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "원거리 물리 데미지 10% 증가." }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK004] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "주인공 버프", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "캐스팅이 끊기지 않는다." }
 	}
 }
